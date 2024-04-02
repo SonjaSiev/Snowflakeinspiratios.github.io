@@ -1,65 +1,84 @@
-  body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
-            text-align: center;
-            margin: 0px;
-            }
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    margin: 0px;
+}
 
-    header {
-            background-color: black;
-            padding: 10px;
-            text-align: center;
-            }
-
-    nav {
-            margin-left: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-            font-family: Arial;
-            font-size: 40px;
-            }
-
-    nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            }
-
-    nav li {
-            margin-right: 20px;
-            }
-
-    nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 0 10px;
-            transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
-            }
-
-    nav a:hover {
-            color: #545454; /* Värimuutos hover-tilassa */
-            }
-
-    nav a.active {
-            color: #545454; /* Aktiivisen linkin väri */
-            }
-
-    img {
-            max-width: 100%;
-            height: auto;
-            }
+header {
+    background-color: black;
+    padding: 10px; 
+    text-align: center;
+}
 
 
-    main {
+nav {
+    margin-left: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}   
+
+
+nav li {
+    margin-right: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
+}
+
+
+nav a:hover {
+    color: #545454; /* Värimuutos hover-tilassa */
+}   
+
+nav a.active {
+    color: #545454; /* Aktiivisen linkin väri */
+    /* Lisää muita tyylisääntöjä tarvittaessa */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
+}
+
+nav a:hover {
+    color: #545454; /* Värimuutos hover-tilassa */
+}
+
+nav a.active {
+    color: #545454; /* Aktiivisen linkin väri */
+}
+  
+
+main {
     max-width: 800px; /* Säädä leveyttä tarpeen mukaan */
     margin: 0 auto;
     padding: 20px;
-    }
+}
+
 h1 {
     font-size: 50px;
 }
