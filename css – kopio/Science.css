@@ -1,9 +1,10 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f7f7f7;
     color: #333;
     text-align: center;
-    margin: 0px;
 }
         
 header {
@@ -13,11 +14,11 @@ header {
 }
         
 nav {
-    margin-left: 20px;
     text-align: center;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-family: Arial;
-    font-size: 40px;
+    font-size: 1.25em
 }
 
 nav ul {
@@ -51,6 +52,7 @@ nav a.active {
         
 img {
     max-width: 100%;
+    height: auto;
 }
         
 main {
@@ -60,13 +62,13 @@ main {
 }
         
 h1 {
-    font-size: 50px;
+    font-size: 36px;
 }
         
 p {
     line-height: 1.6;
     text-align: justify;
-    font-size: 30px;
+    font-size: 18px;
 }
         
 iframe {
