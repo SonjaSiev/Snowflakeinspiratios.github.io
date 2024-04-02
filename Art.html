@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art</title>
+    <link rel="icon" href="img/lataus.jfif">
+    <link rel="stylesheet" type="text/css" href="css/Art.css">
+</head>
+
+<body>
+    <div id="pageContent">
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Patterns.html">Patterns</a></li>
+                    <li><a href="science.html">Science</a></li>
+                    <li><a href="Art.html" class="active">Art</a></li>
+                    <li><a href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <img src="img/art.jpg" alt="Single translucent snowflake in the snow">
+
+        <main>
+            <section id="Photographers">
+                <h1>Capturing the Beauty of Snowflakes: Tips for Photographers</h1>
+                <br>
+                <h2>1. Prepare for the Weather:</h2>
+                <p>
+                    Begin capturing snowflakes as soon as the snowfall starts for clean and well-defined shapes. Avoid
+                    windy days to ensure snowflakes remain intact.
+                </p>
+
+
+                <h2>2. Use a Macro Lens:</h2>
+                <p>
+                    Employ a macro lens or macro lens adapter to capture even the smallest details of snowflakes. The
+                    macro lens allows for precise focus at close distances.
+                </p>
+
+                <h2>3. Stable Platform:</h2>
+                <p>
+                    Use a tripod or stable surface to maintain a steady camera position. Ensure you remain still to
+                    avoid any unnecessary camera shake.
+                </p>
+
+
+                <h2>4. Optimal Lighting:</h2>
+                <p>
+                    Utilize natural light whenever possible. Overcast days or falling snow provide soft lighting, ideal
+                    for photographing snowflakes. Avoid harsh sunlight to prevent strong shadows.
+                </p>
+
+
+                <h2>5. Appropriate Aperture and Shutter Speed:</h2>
+                <p>
+                    Choose a wide aperture (small f-stop) for a shallow depth of field, separating snowflakes from the
+                    background. Use a fast shutter speed to avoid blurry images, especially without a tripod.
+                </p>
+
+                <h2>6. Manual Focus:</h2>
+                <p>
+                    Use manual focus to ensure precise focusing on the snowflakes. Autofocus can be challenging when
+                    shooting from such close distances.
+                </p>
+
+
+                <h2>7. Experiment with Angles: </h2>
+                <p>
+                    Try different angles and compositions to create interesting and visually pleasing images. Capture
+                    snowflakes from directly above or from the side for variety.
+                </p>
+
+
+
+                <h2>8. Utilize Accessories: </h2>
+                <p>
+                    Consider using a diffuser or a white umbrella to create softer light and protect snowflakes from
+                    additional falling snow.
+                </p>
+
+                <h2>9. Pay Attention to the Background: </h2>
+                <p>
+                    Ensure the background is neutral and does not distract from the beauty of the snowflakes. Opt for a
+                    snowy landscape or a simple background.
+                </p>
+
+
+                <h2>10. Capture Quickly:</h2>
+                <p>
+                    Snowflakes melt rapidly, so be ready to take multiple shots quickly. This ensures you capture the
+                    best moment before they disappear.
+
+                    These guidelines will help you get started with photographing snowflakes. Feel free to experiment
+                    with different settings and ideas to capture unique and enchanting images.
+                </p>
+
+            </section>
+
+        </main>
+        <h5>
+            In this gallery, you'll find snowflake pictures taken by other talented photographers.
+        </h5>
+
+        <div class="gallery-wrap" id="galleryContainer">
+            <img src="img/buttons/back.png" alt="back button" id="backBtn">
+
+            <div class="gallery">
+                <div>
+                    <span><img src="img/small/snowflake1.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake1.jpg"></span>
+                    <span><img src="img/small/snowflake2.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake2.jpg"></span>
+                    <span><img src="img/small/snowflake3.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake3.jpg"></span>
+                </div>
+                <div>
+                    <span><img src="img/small/snowflake4.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake4.jpg"></span>
+                    <span><img src="img/small/snowflake5.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake5.jpg"></span>
+                    <span><img src="img/small/snowflake6.jpg" alt="picture of a snowflake" class="galleryImage"
+                            data-fullImage="img/gallery/snowflake6.jpg"></span>
+                </div>
+            </div>
+            <img src="img/buttons/next.png" alt="next button" id="nextBtn">
+        </div>
+    </div>
+
+    <a href="#galleryContainer">
+        <div id="fullScreenImage">
+            <img src="img/buttons/back.png" alt="back button" id="backBtn2">
+            <div id="imgOverlay">
+                <img src="" alt="picture of a snowflake" id="fullGalleryImage">
+            </div>
+        </div>
+    </a>
+
+    <script>
+
+        let galleryImages = document.getElementsByClassName('galleryImage');
+        for (i = 0; i < galleryImages.length; i++) {
+            galleryImages[i].addEventListener("click", (evt) => {
+                console.log('image was clicked alt=' + evt.currentTarget.getAttribute('data-fullImage'));
+
+                /* ------------ Show the full image ---------------- */
+                let pageContent = document.getElementById('pageContent');
+                pageContent.style.display = 'none';
+
+                let fullGalleryImage = document.getElementById('fullGalleryImage');
+                fullGalleryImage.setAttribute('src', evt.currentTarget.getAttribute('data-fullImage'));
+
+                let overlayImage = document.getElementById('fullScreenImage');
+                overlayImage.style.display = 'block';
+                /* ------------------------------------------------- */
+            });
+        }
+
+        /* ------------ Go back to the gallery from full image ------ */
+        let overlayImage = document.getElementById('fullScreenImage');
+        overlayImage.addEventListener("click", () => {
+
+            let pageContent = document.getElementById('pageContent');
+            pageContent.style.display = 'block';
+
+            let overlayImage = document.getElementById('fullScreenImage');
+            overlayImage.style.display = 'none';
+        });
+        /* --------------------------------------------------------- */
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            console.log('image is scrolled');
+        });
+
+        nextBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 1150;
+        });
+
+        backBtn.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft -= 1150;
+        });
+
+    </script>
+
+
+    <footer>
+    </footer>
+</body>
+
+</html>

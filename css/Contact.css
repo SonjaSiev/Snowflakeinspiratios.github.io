@@ -1,0 +1,208 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 0 30px 30px 100px;
+
+}
+
+header {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Arial;
+    font-size: 1.25em
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em; /* Adjusted font size */
+    margin: 0 10px;
+    transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
+}
+
+nav a:hover {
+    color: #545454; /* Värimuutos hover-tilassa */
+}
+
+nav a.active {
+    color: #545454; /* Aktiivisen linkin väri */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    max-width: 800px; /* Säädä leveyttä tarpeen mukaan */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1  {
+    font-size: 3em; /* Adjusted font size */
+}
+
+img {
+    max-width: 100%; 
+}
+
+.hi-slide {
+    position: relative;
+    width: 754px;
+    height: 292px;
+    border-radius: 50px;
+    margin: 115px auto 0;
+}
+
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 0.7s;
+    font-size: 20px;
+    fomt-weight: bold;
+
+}
+
+.hi-slide .hi-next:hover,
+.h1-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: white;
+}
+
+.hi-slide .hi-prev { left: 59px;   }
+.hi-slide .hi-prev: :before {
+    content: '<';
+
+}
+
+.hi-slide .hi-next {
+    right: -59px;
+
+}
+
+.hi-slide .hi-prev: :before {
+    content: '<';
+
+}
+
+.hi-slide > ul{
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+}
+
+.hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 147;
+    width: 0;
+    height: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, 
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #37383b;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer * {
+    font-size: 16px;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    gap: 2px; 
+}
+
+footer div h3 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+footer div p {
+    margin-bottom: 8px;
+}
+
+footer div:last-child {
+    grid-column: span 2;
+}
