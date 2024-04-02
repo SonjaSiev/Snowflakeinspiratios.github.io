@@ -8,10 +8,9 @@ body {
 
 header {
     background-color: black;
-    padding: 10px; 
+    padding: 10px;
     text-align: center;
 }
-
 
 nav {
     margin-left: 20px;
@@ -27,11 +26,10 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-}   
-
+}
 
 nav li {
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 nav a {
@@ -43,14 +41,12 @@ nav a {
     transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
 }
 
-
 nav a:hover {
     color: #545454; /* Värimuutos hover-tilassa */
-}   
+}
 
 nav a.active {
     color: #545454; /* Aktiivisen linkin väri */
-    /* Lisää muita tyylisääntöjä tarvittaessa */
 }
 
 img {
@@ -58,20 +54,6 @@ img {
     height: auto;
 }
 
-nav a {
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s; /* Lisätään siirtymäaika värin muutokselle */
-}
-
-nav a:hover {
-    color: #545454; /* Värimuutos hover-tilassa */
-}
-
-nav a.active {
-    color: #545454; /* Aktiivisen linkin väri */
-}
-  
 
 main {
     max-width: 800px; /* Säädä leveyttä tarpeen mukaan */
